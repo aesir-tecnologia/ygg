@@ -1,30 +1,31 @@
 {
-    "name": ":vendor_slug/:package_slug",
-    "description": ":package_description",
+    "name": "aesir-tecnologia/ygg",
+    "description": "This is my package ygg",
+    "type": "library",
     "keywords": [
-        ":vendor_name",
+        "Aesir Tecnologia",
         "laravel",
-        ":package_slug"
+        "ygg"
     ],
-    "homepage": "https://github.com/:vendor_slug/:package_slug",
+    "homepage": "https://github.com/aesir-tecnologia/ygg",
     "license": "MIT",
     "authors": [
         {
-            "name": ":author_name",
-            "email": "author@domain.com",
+            "name": "Marco Machado",
+            "email": "marco.machado@gmail.com",
             "role": "Developer"
         }
     ],
     "require": {
-        "php": "^8.1",
+        "php": "^8.2",
         "spatie/laravel-package-tools": "^1.14.0",
         "illuminate/contracts": "^10.0"
     },
     "require-dev": {
+        "larastan/larastan": "^2.0.1",
         "laravel/pint": "^1.0",
         "nunomaduro/collision": "^7.8",
-        "larastan/larastan": "^2.0.1",
-        "orchestra/testbench": "^8.8",
+        "orchestra/testbench": "^8.20",
         "pestphp/pest": "^2.20",
         "pestphp/pest-plugin-arch": "^2.0",
         "pestphp/pest-plugin-laravel": "^2.0",
@@ -35,19 +36,19 @@
     },
     "autoload": {
         "psr-4": {
-            "VendorName\\Skeleton\\": "src/",
-            "VendorName\\Skeleton\\Database\\Factories\\": "database/factories/"
+            "Aesir\\Ygg\\": "src/",
+            "Aesir\\Ygg\\Database\\Factories\\": "database/factories/"
         }
     },
     "autoload-dev": {
         "psr-4": {
-            "VendorName\\Skeleton\\Tests\\": "tests/",
+            "Aesir\\Ygg\\Tests\\": "tests/",
             "Workbench\\App\\": "workbench/app/"
         }
     },
     "scripts": {
         "post-autoload-dump": "@composer run prepare",
-        "clear": "@php vendor/bin/testbench package:purge-skeleton --ansi",
+        "clear": "@php vendor/bin/testbench package:purge-ygg --ansi",
         "prepare": "@php vendor/bin/testbench package:discover --ansi",
         "build": [
             "@composer run prepare",
@@ -73,10 +74,10 @@
     "extra": {
         "laravel": {
             "providers": [
-                "VendorName\\Skeleton\\SkeletonServiceProvider"
+                "Aesir\\Ygg\\YggServiceProvider"
             ],
             "aliases": {
-                "Skeleton": "VendorName\\Skeleton\\Facades\\Skeleton"
+                "Ygg": "Aesir\\Ygg\\Facades\\Ygg"
             }
         }
     },
