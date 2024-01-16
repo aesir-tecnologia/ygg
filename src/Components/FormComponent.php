@@ -8,7 +8,7 @@ use Illuminate\View\ComponentAttributeBag;
 
 abstract class FormComponent extends Component
 {
-    /** @var string[] Attributes shared between AttributeBag and component properties. */
+    /** @var string[] Attributes shared between ComponentAttributeBag and component properties. */
     protected array $sharedAttributes = [
         'id',
         'name',
